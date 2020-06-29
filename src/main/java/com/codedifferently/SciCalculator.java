@@ -6,8 +6,19 @@ package com.codedifferently;
  */
 public class SciCalculator 
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
         
+    }
+
+    private Double currentValue;
+
+    public SciCalculator(){
+        this.currentValue = 0.0;
+
+    }
+
+    public Double getCurrentValue(){
+        return currentValue;
     }
 }
