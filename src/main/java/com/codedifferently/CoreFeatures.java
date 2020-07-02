@@ -13,7 +13,6 @@ public class CoreFeatures {
     public Double divide(Double d) {
         if (d == 0) {
             System.out.println("That's a no no...can't divide by zero");
-            SciCalculator.setCurrentValue(value);
             return null;
         } 
         return (SciCalculator.getCurrentValue()/d);
