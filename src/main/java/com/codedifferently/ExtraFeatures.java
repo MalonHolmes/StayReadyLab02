@@ -3,11 +3,16 @@ package com.codedifferently;
 public class ExtraFeatures {
     
     public double absValue(){
-        return Math.abs(SciCalculator.getCurrentValue());
+        double currentValueAbs = Math.abs(SciCalculator.getCurrentValue());
+        SciCalculator.setCurrentValue(currentValueAbs);
+        return SciCalculator.getCurrentValue();
     }
 
     public double round(){
-        return Math.round(SciCalculator.getCurrentValue());
+        double currentValueRound = 
+            Math.round(SciCalculator.getCurrentValue());
+        SciCalculator.setCurrentValue(currentValueRound);
+        return SciCalculator.getCurrentValue();
     }
 
 }

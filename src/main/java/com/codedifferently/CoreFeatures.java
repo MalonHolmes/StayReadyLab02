@@ -3,47 +3,58 @@ package com.codedifferently;
 public class CoreFeatures {
 
     public Double add(Double d) {
-        return SciCalculator.getCurrentValue() + d;
+        SciCalculator.setCurrentValue(SciCalculator.getCurrentValue() + d);
+        return SciCalculator.getCurrentValue();
     }
     
     public Double subtract(Double d) {
-        return SciCalculator.getCurrentValue() - d;
+        SciCalculator.setCurrentValue(SciCalculator.getCurrentValue() - d);
+        return SciCalculator.getCurrentValue();
     }
 
     public Double divide(Double d) {
         if (d == 0) {
             System.out.println("That's a no no...can't divide by zero");
+            // Implement an error message Err or sumn 
             return null;
         } 
-        return (SciCalculator.getCurrentValue()/d);
+        SciCalculator.setCurrentValue(SciCalculator.getCurrentValue()/d);
+        return SciCalculator.getCurrentValue();
     }
 
     public Double multiply(Double d) {
-        return SciCalculator.getCurrentValue() * d;
+        SciCalculator.setCurrentValue(SciCalculator.getCurrentValue() * d);
+        return SciCalculator.getCurrentValue();
     }
 
     public Double Exp(Double d) {
-        double result = 1;
+        double result = 1.0;
         for (double power = 0; power < d; power++){
             result *= SciCalculator.getCurrentValue();
         }
-        return result;
+        SciCalculator.setCurrentValue(result);
+        return SciCalculator.getCurrentValue();
     }
 
     public Double square() { // Took out parameter because the function doesn't need a second number to square the currentValue
-        return SciCalculator.getCurrentValue() * SciCalculator.getCurrentValue();
+        SciCalculator.setCurrentValue(SciCalculator.getCurrentValue() * SciCalculator.getCurrentValue());
+        return SciCalculator.getCurrentValue();
     }
 
     public Double sqrt() { // Took out parameter because the function doesn't need a second number to take the squareroot of the currentValue
-        return Math.sqrt(SciCalculator.getCurrentValue());
+        double currentValueSqrt = Math.sqrt(SciCalculator.getCurrentValue());
+        SciCalculator.setCurrentValue(currentValueSqrt);
+        return SciCalculator.getCurrentValue();
     }
 
     public Double inverse() { 
-        return 1/SciCalculator.getCurrentValue();
+        SciCalculator.setCurrentValue(1/SciCalculator.getCurrentValue());
+        return SciCalculator.getCurrentValue();
     }
 
     public Double invertSign() {
-        return -(SciCalculator.getCurrentValue());
+        SciCalculator.setCurrentValue(-(SciCalculator.getCurrentValue()));
+        return SciCalculator.getCurrentValue();
     }
 
 }

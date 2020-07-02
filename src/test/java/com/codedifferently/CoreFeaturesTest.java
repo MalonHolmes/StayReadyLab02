@@ -65,8 +65,8 @@ public class CoreFeaturesTest {
         SciCalculator.setCurrentValue(3.0);
 
         // When
-        double expected = 1.0;
-        double actual = cf.divide(0.0);
+        double expected = 3.0;
+        double actual = cf.divide(1.0);
 
         // Then
         Assert.assertEquals(expected, actual, 0.0);
