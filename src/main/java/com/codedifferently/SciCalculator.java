@@ -7,7 +7,7 @@ public class SciCalculator
     private TrigFunctions trigFunctions;
     private CoreFeatures coreFeatures;
     private TrigUnits trigUnits;
-    private Memory memory;
+    protected Memory memory;
 
     public SciCalculator(){
         displayMode = new DisplayMode();
@@ -47,6 +47,16 @@ public class SciCalculator
 
     public TrigFunctions geTrigFunctions(){
         return trigFunctions;
+    }
+
+    public static void main(String[] args){
+        double x = 9.991;
+        int y = (int) x;
+
+        System.out.println("y is " + y);
+
+        boolean z = 8==9;
+        System.out.println("z is " + z);
     }
 
 }
